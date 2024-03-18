@@ -15,3 +15,13 @@ The Meet app is a progressive web application with a serverless backend, offerin
 5. **Add Shortcut to Home Screen**: As a user, I want to be able to add a shortcut to the app on my device's home screen for easy access, enhancing convenience and usability.
 
 6. **Visualize Event Details with Charts**: As a user, I want to see visual representations (charts) of event details so that I can better understand the data associated with events and make informed decisions.
+
+## Filter Events by City
+
+### Scenario 1: User filters events by city
+
+```gherkin
+Given the user is on the events page
+When the user selects a specific city from the filter dropdown
+Then the user should see a list of events taking place in that city
+```
