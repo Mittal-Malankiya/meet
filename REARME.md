@@ -16,6 +16,8 @@ The Meet app is a progressive web application with a serverless backend, offerin
 
 6. **Visualize Event Details with Charts**: As a user, I want to see visual representations (charts) of event details so that I can better understand the data associated with events and make informed decisions.
 
+7. **expands event details for more information**: As a user, I want to expand event details,So that I can access additional information such as event description, location, and time.
+
 ## Filter Events by City
 
 ### Scenario 1: User filters events by city
@@ -72,5 +74,14 @@ Then the event details should be displayed below the event list
 Given the user is viewing event details on a desktop device
 When the user clicks on a particular event
 Then the event details should be displayed adjacent to the event list
+
+```
+
+### Scenario 7: User expands event details for more information
+
+```gherkin
+Given the user is viewing the event details
+When the user wants to access additional information about the event
+Then the user should be able to expand the event details
 
 ```
