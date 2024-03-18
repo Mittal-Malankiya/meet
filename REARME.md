@@ -25,3 +25,14 @@ Given the user is on the events page
 When the user selects a specific city from the filter dropdown
 Then the user should see a list of events taking place in that city
 ```
+
+## Show/Hide Event Details
+
+### Scenario 2: User shows event details
+
+```gherkin
+Given the user is viewing the event list
+When the user clicks on a particular event
+Then the event details should be displayed
+
+```
