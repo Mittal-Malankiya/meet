@@ -36,3 +36,41 @@ When the user clicks on a particular event
 Then the event details should be displayed
 
 ```
+
+## Show/Hide Event Details
+
+### Scenario 3: User toggles event details visibility
+
+```gherkin
+Given the user is viewing event details
+When the user clicks on the toggle details button
+Then the visibility of event details should change accordingly
+
+```
+
+### Scenario 4: User navigates back to event list
+
+```gherkin
+Given the user is viewing event details
+When the user clicks on the back button
+Then the user should be redirected to the event list
+
+```
+
+### Scenario 5: User views event details on mobile device
+
+```gherkin
+Given the user is viewing event details on a mobile device
+When the user taps on a particular event
+Then the event details should be displayed below the event list
+
+```
+
+### Scenario 6: User views event details on desktop device
+
+```gherkin
+Given the user is viewing event details on a desktop device
+When the user clicks on a particular event
+Then the event details should be displayed adjacent to the event list
+
+```
