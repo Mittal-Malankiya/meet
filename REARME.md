@@ -4,19 +4,33 @@ The Meet app is a progressive web application with a serverless backend, offerin
 
 ## User Stories
 
-1. **Filter Events by City**: As a user, I want to filter events by city so that I can easily see a list of events taking place in a specific city.
+### Filter Events by City
 
-2. **Show/Hide Event Details**: As a user, I want to have control over the amount of information displayed for each event, allowing me to show or hide event details as needed.
+As a user, I want to filter events by city so that I can easily see a list of events taking place in a specific city.
 
-3. **Specify Number of Events**: As a user, I want to be able to specify the number of events I want to see, enabling me to quickly find and browse through a manageable list of events without feeling overwhelmed.
+### Show/Hide Event Details
 
-4. **Offline Access**: As a user, I want to be able to use the app when offline so that I can access the events list and related information at all times, even without an internet connection.
+As a user, I want to have control over the amount of information displayed for each event, allowing me to show or hide event details as needed.
 
-5. **Add Shortcut to Home Screen**: As a user, I want to be able to add a shortcut to the app on my device's home screen for easy access, enhancing convenience and usability.
+### Specify Number of Events
 
-6. **Visualize Event Details with Charts**: As a user, I want to see visual representations (charts) of event details so that I can better understand the data associated with events and make informed decisions.
+As a user, I want to be able to specify the number of events I want to see, enabling me to quickly find and browse through a manageable list of events without feeling overwhelmed.
 
-7. **expands event details for more information**: As a user, I want to expand event details,So that I can access additional information such as event description, location, and time.
+### Offline Access
+
+As a user, I want to be able to use the app when offline so that I can access the events list and related information at all times, even without an internet connection.
+
+### Add Shortcut to Home Screen
+
+As a user, I want to be able to add a shortcut to the app on my device's home screen for easy access, enhancing convenience and usability.
+
+### Visualize Event Details with Charts
+
+As a user, I want to see visual representations (charts) of event details so that I can better understand the data associated with events and make informed decisions.
+
+### Expand Event Details for More Information
+
+As a user, I want to expand event details so that I can access additional information such as event description, location, and time.
 
 ## Filter Events by City
 
