@@ -13,7 +13,7 @@
 
 service: auth-server
 # app and org for use with dashboard.serverless.com
-#app: your-app-name
+app: meet
 #org: your-org-name
 
 # You can pin your service to only deploy with a specific Serverless version
@@ -63,10 +63,10 @@ provider:
 #    - include-me-dir/**
 
 functions:
-getAuthURL:
-  handler: handler.getAuthURL
-  events:
-    - http:
+  getAuthURL:
+    handler: handler.getAuthURL
+    events:
+      - http:
         path: api/get-auth-url
         method: get
         #    The following are a few example events you can configure
