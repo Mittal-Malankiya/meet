@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 const { google } = require("googleapis");
 const calendar = google.calendar("v3");
@@ -55,6 +55,56 @@ module.exports.getAccessToken = async (event) => {
           "Access-Control-Allow-Credentials": true,
         },
         body: JSON.stringify(results),
+      };
+    })
+    .catch((error) => {
+      // Handle error
+      return {
+        statusCode: 500,
+        body: JSON.stringify(error),
+      };
+    });
+};
+
+// Get Calendar Events
+module.exports.getCalendarEvents = async (event) => {
+  // Get access token from the event
+  const { code } = event.pathParameters;
+
+  // Get access token using code
+  const { tokens } = await oAuth2Client.getToken(code);
+  const { access_token } = tokens;
+
+  // Set access token as credentials
+  oAuth2Client.setCredentials({ access_token });
+
+  return new Promise((resolve, reject) => {
+    calendar.events.list(
+      {
+        calendarId: CALENDAR_ID,
+        auth: oAuth2Client,
+        timeMin: new Date().toISOString(),
+        singleEvents: true,
+        orderBy: "startTime",
+      },
+      (error, response) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(response);
+        }
+      }
+    );
+  })
+    .then((results) => {
+      // Respond with calendar events
+      return {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true,
+        },
+        body: JSON.stringify({ events: results.data.items }),
       };
     })
     .catch((error) => {
