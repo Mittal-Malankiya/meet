@@ -68,14 +68,9 @@ module.exports.getAccessToken = async (event) => {
 
 // Get Calendar Events
 module.exports.getCalendarEvents = async (event) => {
-  // Get access token from the event
-  const { code } = event.pathParameters;
-
-  // Get access token using code
-  const { tokens } = await oAuth2Client.getToken(code);
-  const { access_token } = tokens;
-
-  // Set access token as credentials
+  const access_token = decodeURIComponent(
+    `${event.pathParameters.access_token}`
+  );
   oAuth2Client.setCredentials({ access_token });
 
   return new Promise((resolve, reject) => {
@@ -89,15 +84,14 @@ module.exports.getCalendarEvents = async (event) => {
       },
       (error, response) => {
         if (error) {
-          reject(error);
+          return reject(error);
         } else {
-          resolve(response);
+          return resolve(response);
         }
       }
     );
   })
     .then((results) => {
-      // Respond with calendar events
       return {
         statusCode: 200,
         headers: {
