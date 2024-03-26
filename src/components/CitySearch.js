@@ -6,17 +6,24 @@ const CitySearch = ({ allLocations }) => {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    setSuggestions(allLocations);
-  }, [`${allLocations}`]);
+    if (allLocations && allLocations.length > 0) {
+      const initialLocations = allLocations
+        .flatMap((eventObj) => eventObj.items)
+        .map((event) => event.location);
+      setSuggestions(initialLocations);
+    }
+  }, [allLocations]);
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
     const filteredLocations = allLocations
-      ? allLocations.filter((location) => {
-          return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
-        })
+      ? allLocations
+          .flatMap((eventObj) => eventObj.items) // Flatten the nested items arrays into one array.
+          .map((event) => event.location) // Extract locations from the events.
+          .filter((location) =>
+            location.toUpperCase().includes(value.toUpperCase())
+          )
       : [];
-
     setQuery(value);
     setSuggestions(filteredLocations);
   };

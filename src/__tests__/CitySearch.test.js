@@ -44,7 +44,7 @@ describe("<CitySearch /> component", () => {
     const suggestions = allLocations
       ? allLocations.filter((location) => {
           return (
-            location.toUpperCase().indexOf(cityTextBox.value.toUpperCase()) > -1
+            location && location.toUpperCase().indexOf(value.toUpperCase()) > -1
           );
         })
       : [];

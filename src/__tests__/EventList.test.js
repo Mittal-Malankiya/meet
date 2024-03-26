@@ -3,8 +3,12 @@ import { getEvents } from "../api";
 import EventList from "../components/EventList";
 
 describe("<EventList /> component", () => {
+  let EventListComponent;
+  beforeEach(() => {
+    EventListComponent = render(<EventList />);
+  });
+
   test('has an element with "list" role', () => {
-    const EventListComponent = render(<EventList />);
     expect(EventListComponent.queryByRole("list")).toBeInTheDocument();
   });
 
