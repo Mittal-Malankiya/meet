@@ -1,5 +1,5 @@
 const Event = () => {
-  return <li></li>;
+  return <li className="event"></li>;
 };
 
 export default Event;
