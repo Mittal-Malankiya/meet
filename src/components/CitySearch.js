@@ -6,9 +6,14 @@ const CitySearch = ({ allLocations }) => {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    setSuggestions(allLocations);
-  }, [`${allLocations}`]);
-
+    console.log("allLocations", allLocations);
+    if (allLocations && allLocations.length > 0) {
+      const initialLocations = allLocations
+        .flatMap((eventObj) => eventObj.items)
+        .map((event) => event.location);
+      setSuggestions(initialLocations);
+    }
+  }, [allLocations]);
   const handleInputChanged = (event) => {
     const value = event.target.value;
     const filteredLocations = allLocations
@@ -39,9 +44,9 @@ const CitySearch = ({ allLocations }) => {
       />
       {showSuggestions ? (
         <ul className="suggestions">
-          {suggestions.map((suggestion) => {
+          {suggestions.map((suggestion, index) => {
             return (
-              <li onClick={handleItemClicked} key={suggestion}>
+              <li onClick={handleItemClicked} key={suggestion + index}>
                 {suggestion}
               </li>
             );
@@ -54,5 +59,4 @@ const CitySearch = ({ allLocations }) => {
     </div>
   );
 };
-
 export default CitySearch;
