@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
-import Event from "../components/Event.js";
-import mockData from "../src/mock-data.js";
+import Event from "../components/Event";
+import mockData from "../mock-data";
 import { getEvents } from "../api";
 import userEvent from "@testing-library/user-event";
 
