@@ -3,6 +3,7 @@ const CitySearch = ({ allLocations }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+
   useEffect(() => {
     console.log("allLocations", allLocations);
     if (allLocations && allLocations.length > 0) {
