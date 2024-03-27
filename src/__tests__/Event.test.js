@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import Event from "../components/Event";
-import mockData from "../mock-data";
+import mockData from "../src/mock-data.js";
 import { getEvents } from "../api";
 import userEvent from "@testing-library/user-event";
 
@@ -8,7 +8,7 @@ describe("<Event /> component", () => {
   let EventComponent;
   const event = mockData[0].items[0];
   beforeEach(() => {
-    EventComponent = render(<Event event={event} />);
+    EventComponent = render(<Event event={getEvents} />);
   });
   test("has event title", () => {
     expect(EventComponent.queryByText(event.summary)).toBeInTheDocument();
