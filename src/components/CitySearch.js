@@ -9,10 +9,12 @@ const CitySearch = ({ allLocations }) => {
     if (allLocations && allLocations.length > 0) {
       const initialLocations = allLocations
         .flatMap((eventObj) => eventObj?.items ?? [])
-        .map((event) => event.location);
+        .map((event) => event.location)
+        .filter((location) => location); // Filter out null or undefined values
       setSuggestions(initialLocations);
     }
   }, [allLocations]);
+
   const handleInputChanged = (event) => {
     const value = event.target.value;
     const filteredLocations = suggestions.filter((location) => {
