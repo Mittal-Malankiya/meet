@@ -5,15 +5,8 @@ const CitySearch = ({ allLocations }) => {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    console.log("allLocations", allLocations);
-    if (allLocations && allLocations.length > 0) {
-      const initialLocations = allLocations
-        .flatMap((eventObj) => eventObj?.items ?? [])
-        .map((event) => event.location)
-        .filter((location) => location); // Filter out null or undefined values
-      setSuggestions(initialLocations);
-    }
-  }, [allLocations]);
+    setSuggestions(allLocations);
+  }, [`${allLocations}`]);
   const handleInputChanged = (event) => {
     const value = event.target.value;
     const filteredLocations = suggestions.filter((location) => {
@@ -42,9 +35,9 @@ const CitySearch = ({ allLocations }) => {
       />
       {showSuggestions ? (
         <ul className="suggestions">
-          {suggestions.map((suggestion, index) => {
+          {suggestions.map((suggestion) => {
             return (
-              <li onClick={handleItemClicked} key={suggestion + index}>
+              <li onClick={handleItemClicked} key={suggestion}>
                 {suggestion}
               </li>
             );
