@@ -14,7 +14,6 @@ const CitySearch = ({ allLocations }) => {
       setSuggestions(initialLocations);
     }
   }, [allLocations]);
-
   const handleInputChanged = (event) => {
     const value = event.target.value;
     const filteredLocations = suggestions.filter((location) => {
