@@ -63,7 +63,3 @@ describe("<Event /> component", () => {
     expect(EventComponent.queryByText("show details")).toBeInTheDocument();
   });
 });
-
-// integration testing
-
-describe("<EventList /> integration", () => {});
