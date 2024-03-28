@@ -24,10 +24,6 @@ describe("<Event /> component", () => {
     ).toBeInTheDocument();
   });
 
-  /*test('renders events start time', () => {
-        expect(EventComponent.queryByText(allEvents[0].created)).toBeInTheDocument();
-    });*/
-
   test("renders event details button with the title (show details)", () => {
     expect(EventComponent.queryByText("show details")).toBeInTheDocument();
   });
@@ -67,3 +63,7 @@ describe("<Event /> component", () => {
     expect(EventComponent.queryByText("show details")).toBeInTheDocument();
   });
 });
+
+// integration testing
+
+describe("<EventList /> integration", () => {});

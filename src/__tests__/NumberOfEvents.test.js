@@ -17,9 +17,9 @@ describe("<NumberOfEvents /> component", () => {
     expect(numberTextBox).toHaveClass("number-of-events-input");
   });
 
-  test("default value of the input field is 33", () => {
+  test("default value of the input field is 32", () => {
     const numberTextBox = NumberOfEventsComponent.queryByRole("spinbutton");
-    expect(numberTextBox).toHaveValue(33);
+    expect(numberTextBox).toHaveValue(32);
   });
 
   test("value changes accordingly when user types", async () => {
