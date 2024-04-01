@@ -11,8 +11,8 @@ const App = () => {
   const [currentNOE, setCurrentNOE] = useState(32);
   const [events, setEvents] = useState([]);
   const [errorAlert, setErrorAlert] = useState("");
-
   const [currentCity, setCurrentCity] = useState("See all cities");
+
   useEffect(() => {
     fetchData();
   }, [currentCity, currentNOE]);

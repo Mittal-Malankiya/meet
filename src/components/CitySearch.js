@@ -10,21 +10,22 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
-    const filteredLocations = suggestions.filter((location) => {
-      if (typeof location === "string") {
-        return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
-      }
-      return false;
-    });
+    const filteredLocations = allLocations
+      ? allLocations.filter((location) => {
+          return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
+        })
+      : [];
     setQuery(value);
     setSuggestions(filteredLocations);
   };
+
   const handleItemClicked = (event) => {
     const value = event.target.textContent;
     setQuery(value);
     setShowSuggestions(false);
     setCurrentCity(value);
   };
+
   return (
     <div id="city-search">
       <input
