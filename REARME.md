@@ -20,17 +20,87 @@ The Meet app is a progressive web application with a serverless backend, offerin
 
 ## Filter Events by City
 
-### Scenario 1: User filters events by city
+### Scenario 1: When user hasn’t searched for a specific city, show upcoming events from all cities.
 
 ```gherkin
-Given the user is on the events page
-When the user selects a specific city from the filter dropdown
-Then the user should see a list of events taking place in that city
+Given user hasn’t searched for any city;
+When the user opens the app;
+Then the user should see a list of upcoming events.
+```
+
+### Scenario 2: User should see a list of suggestions when they search for a city.
+
+```gherkin
+Given the main page is open;
+When user starts typing in the city textbox;
+Then the user should receive a list of cities (suggestions) that match what they’ve typed.
+```
+
+### Scenario 3: User can select a city from the suggested list.
+
+```gherkin
+Given user was typing “Berlin” in the city textbox AND the list of suggested cities is showing;
+When the user selects a city (e.g., “Berlin, Germany”) from the list;
+Then their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
 ```
 
 ## Show/Hide Event Details
 
-### Scenario 2: User shows event details
+As a user, I should be able to show and hide event details, so that that I can get more details on an event only when needed.
+
+### Scenario 1: When the details of an event are hidden by default.
+
+```gherkin
+Given the main page is open;
+When the app displays a list of event;
+Then the event details are hidden by default.
+```
+
+### Scenario 2: User clicks to show event details
+
+```gherkin
+Given the main page is open;
+When the app displays a list of event;
+Then the event details are hidden by default.
+```
+
+### Scenario 3: User clicks to hide event details
+
+```gherkin
+Given there is an event with displayed details;
+When the user clicks on the event to hide details again;
+Then the app should hide the details of the event.
+```
+
+## Specify Number of Events
+
+As a user, I should be able to specify the number of events displayed, so that I can decide how many I want to see at once.
+
+### Scenario 1: When the user hasn’t specified a number, 32 events are shown by default.
+
+```gherkin
+Given a user has not specified the number of events;
+When the user views the events section;
+Then 32 events are shown by default.
+```
+
+### Scenario 2: When the user specifies the number of events.
+
+```gherkin
+Given a user has specified the number of events;
+When the user views the events section;
+Then the app displays exactly as many events as the user specified.
+```
+
+```gherkin
+Given user was typing “Berlin” in the city textbox AND the list of suggested cities is showing;
+When  the user selects a city (e.g., “Berlin, Germany”) from the list;
+Then their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
+```
+
+## Show/Hide Event Details
+
+### Scenario 2: As a user, I should be able to show and hide event details, so that that I can get more details on an event only when needed.
 
 ```gherkin
 Given the user is viewing the event list
