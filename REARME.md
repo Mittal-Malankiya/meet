@@ -58,9 +58,9 @@ Then the event details are hidden by default.
 
 ### Scenario 2: User clicks to show event details
 
-````gherkin
-Given there is an event with hidden details;
-When the user clicks on the event to show details;
+```gherkin
+Given there is an event with hidden details.
+When the user clicks on the event to show details.
 Then the app should display the details of the event.
 ```
 
@@ -70,7 +70,7 @@ Then the app should display the details of the event.
 Given there is an event with displayed details;
 When the user clicks on the event to hide details again;
 Then the app should hide the details of the event.
-````
+```
 
 ## Specify Number of Events
 
