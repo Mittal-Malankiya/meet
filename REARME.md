@@ -61,7 +61,8 @@ Then the event details are hidden by default.
 ````gherkin
 Given there is an event with hidden details;
 When the user clicks on the event to show details;
-Then the app should display the details of the event.```
+Then the app should display the details of the event.
+```
 
 ### Scenario 3: User clicks to hide event details
 
