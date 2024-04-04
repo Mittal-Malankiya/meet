@@ -14,9 +14,9 @@ The Meet app is a progressive web application with a serverless backend, offerin
 * Use Google Calendar API: Connect a React app with a protected API
   Write & Test AWS Lambda Functions: Write Lambda functions to implement serverless technology in the app. Test Lambda functions and create a serverless deployment package
 * Test:
-  -Unit Testing and Integration Testing: Jest
-  -Acceptance Testing: Cucumber
-  -End-to-End Testing: Puppeteer
+  - Unit Testing and Integration Testing: Jest
+  - Acceptance Testing: Cucumber
+  - End-to-End Testing: Puppeteer
 * Data Visualization: Recharts
 
 ## Link to the App
