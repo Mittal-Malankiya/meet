@@ -8,22 +8,22 @@ The Meet app is a progressive web application with a serverless backend, offerin
 
 ## Tasks in the project
 
-\*Create Test Scenarios: Write user stories based on the app’s key features and translate user stories for each feature into multiple test scenarios.
+- Create Test Scenarios: Write user stories based on the app’s key features and translate user stories for each feature into multiple test scenarios.
 
-- Use OAuth: Prepare an OAuth client for authorization and authentication
-- Use Google Calendar API: Connect a React app with a protected API
+* Use OAuth: Prepare an OAuth client for authorization and authentication
+* Use Google Calendar API: Connect a React app with a protected API
   Write & Test AWS Lambda Functions: Write Lambda functions to implement serverless technology in the app. Test Lambda functions and create a serverless deployment package
-- Test:
+* Test:
   -Unit Testing and Integration Testing: Jest
   -Acceptance Testing: Cucumber
   -End-to-End Testing: Puppeteer
-- Data Visualization: Recharts
+* Data Visualization: Recharts
 
 ## Link to the App
 
--A link to the live, hosted version of the app:https://mittal-malankiya.github.io/meet/
+- A link to the live, hosted version of the app:https://mittal-malankiya.github.io/meet/
 
--The GitHub repository:https://github.com/Mittal-Malankiya/meet
+- The GitHub repository:https://github.com/Mittal-Malankiya/meet
 
 ## User Stories
 
