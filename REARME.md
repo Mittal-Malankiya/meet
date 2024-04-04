@@ -2,6 +2,29 @@
 
 The Meet app is a progressive web application with a serverless backend, offering offline access to upcoming events in specific cities. Its responsive design ensures seamless display across devices, delivering a superior user experience. Powered by Test-Driven Development, it prioritizes code quality and test coverage for optimal performance.
 
+## Screenshots to represent the project
+
+![alt text](image.png)
+
+## Tasks in the project
+
+\*Create Test Scenarios: Write user stories based on the app’s key features and translate user stories for each feature into multiple test scenarios.
+
+- Use OAuth: Prepare an OAuth client for authorization and authentication
+- Use Google Calendar API: Connect a React app with a protected API
+  Write & Test AWS Lambda Functions: Write Lambda functions to implement serverless technology in the app. Test Lambda functions and create a serverless deployment package
+- Test:
+  -Unit Testing and Integration Testing: Jest
+  -Acceptance Testing: Cucumber
+  -End-to-End Testing: Puppeteer
+- Data Visualization: Recharts
+
+## Link to the App
+
+-A link to the live, hosted version of the app:https://mittal-malankiya.github.io/meet/
+
+-The GitHub repository:https://github.com/Mittal-Malankiya/meet
+
 ## User Stories
 
 1. **Filter Events by City**: As a user, I want to filter events by city so that I can easily see a list of events taking place in a specific city.
