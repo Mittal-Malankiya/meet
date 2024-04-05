@@ -162,3 +162,11 @@ Then the app should display a chart visualizing event details.
 ### The use of Serverless Functions
 
 Serverless functions are utilized in the Meet app to handle backend operations without the need for maintaining server infrastructure. For example, when users request information about upcoming events or perform actions like filtering events by city, serverless functions respond to these requests by retrieving and processing data from the database. By leveraging serverless architecture, the app ensures scalability, cost-effectiveness, and efficient resource utilization, allowing seamless access to event information regardless of the user's location or network connectivity.
+
+### A list of the technologies used throughout the project.
+
+- AWS (Amazon Web Services)
+- Cucumber
+- Puppeteer
+- Jest
+- Recharts
