@@ -15,6 +15,7 @@ ul {
 
 p {
   margin: 5px 0;
+  color:#eee
 }
 
 input[type="text"],
@@ -77,6 +78,7 @@ input[type="number"] {
   border-radius: 4px;
   position: relative;
   color:#eee
+  
 }
 
 .details-btn {
@@ -106,6 +108,7 @@ input[type="number"] {
 .charts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  color: #eee;
 }
 
 /* media queries */
