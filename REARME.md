@@ -4,7 +4,7 @@ The Meet app is a progressive web application with a serverless backend, offerin
 
 ## Screenshots to represent the project
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Tasks in the project
 
