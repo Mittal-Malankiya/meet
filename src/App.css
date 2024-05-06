@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:500); */
 .App {
   text-align: center;
   padding: 2% 5%;
@@ -15,6 +15,7 @@ ul {
 
 p {
   margin: 5px 0;
+  color:#eee
 }
 
 input[type="text"],
@@ -32,6 +33,7 @@ input[type="number"] {
 
 .city {
   width: 250px;
+ 
 }
 
 #city-search {
@@ -75,6 +77,8 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  color:#eee
+  
 }
 
 .details-btn {
@@ -83,6 +87,47 @@ input[type="number"] {
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
+  border-color: #bcdcdb;
+  background-color: white;
   outline: none;
   cursor: pointer;
+}
+
+.details-btn:hover {
+  background-color: #bcdcdb;
+}
+
+.alerts-container {
+  /* position: fixed; */
+  top: 190px;
+  left: 930px;
+  width: 250px;
+   z-index: 1000; 
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #eee;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+}
+h1 {
+font-family:Charming Smile DEMO;
+color:#A07F9E;
+font-size:70px; 
+margin-bottom: 10px;
+margin-top: 10px;
+}
+body {
+  background-color: black;
+}
+#number-of-events{
+  color: #eee;
+  margin-left: auto ;
 }
